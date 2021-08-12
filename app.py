@@ -26,7 +26,6 @@ regressor = st.sidebar.selectbox(
         "K-Nearest Neighbors",
         "Random Forest",
         "Gradient Boosting",
-        "XGBoost",
         "Support Vector Machines",
         "Extra Trees",
     ],
