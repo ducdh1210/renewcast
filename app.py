@@ -43,7 +43,8 @@ window_length = st.sidebar.slider(label="Window Length", min_value=1, value=30)
 
 country_code = COUNTRY_MAPPINGS[country]
 df = get_energy_data(country_code)
-
+st.markdown("Downloaded data")
+st.dataframe(df)
 # Plotting total energy generation for selected country
 st.area_chart(df, use_container_width=False, width=800)
 
