@@ -2,6 +2,7 @@ import os
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
+from credentials import get_token
 from entsoe import EntsoePandasClient
 from entsoe.mappings import TIMEZONE_MAPPINGS
 
@@ -10,7 +11,7 @@ from entsoe.mappings import TIMEZONE_MAPPINGS
 @st.cache
 def get_energy_data(country_code):
     load_dotenv()
-    token = os.environ["TOKEN"]
+    token = get_token()
     client = EntsoePandasClient(api_key=token)
     end = pd.Timestamp.now(tz=TIMEZONE_MAPPINGS[country_code])
     start = end - pd.DateOffset(months=1)

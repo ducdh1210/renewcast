@@ -11,7 +11,8 @@ from sklearn.ensemble import (
     ExtraTreesRegressor,
 )
 from sklearn.svm import LinearSVR
-from xgboost import XGBRegressor
+
+# from xgboost import XGBRegressor
 
 
 def select_regressor(selection):
@@ -20,7 +21,7 @@ def select_regressor(selection):
         "K-Nearest Neighbors": KNeighborsRegressor(),
         "Random Forest": RandomForestRegressor(),
         "Gradient Boosting": GradientBoostingRegressor(),
-        "XGBoost": XGBRegressor(verbosity=0),
+        # "XGBoost": XGBRegressor(verbosity=0),
         "Support Vector Machines": LinearSVR(),
         "Extra Trees": ExtraTreesRegressor(),
     }
