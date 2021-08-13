@@ -1,0 +1,14 @@
+version: '3'
+
+services: 
+  streamlitapp:
+    build: .
+    ports: 
+      - 8501:8501
+    networks:
+      - deploy_network
+    # container_name: renewcastapp_container
+  
+networks: 
+  deploy_network:
+    driver: bridge
